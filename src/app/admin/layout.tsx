@@ -62,6 +62,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             <Link href="/admin/experience" className="flex items-center gap-4 text-slate-400 hover:text-white p-4 rounded-2xl hover:bg-slate-800 transition-all font-space font-bold">
               <span className="material-symbols-outlined">history</span> Pengalaman
             </Link>
+            <Link href="/admin/blog" className="flex items-center gap-4 text-slate-400 hover:text-white p-4 rounded-2xl hover:bg-slate-800 transition-all font-space font-bold">
+              <span className="material-symbols-outlined">article</span> Blog & Kegiatan
+            </Link>
           </nav>
 
           <button 

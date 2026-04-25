@@ -8,7 +8,12 @@ export const createClient = (cookieStore: Awaited<ReturnType<typeof cookies>>) =
   const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 
   if (!supabaseUrl || !supabaseKey) {
-    return createServerClient("", "", { cookies: {} });
+    return createServerClient("", "", { 
+      cookies: {
+        getAll() { return [] },
+        setAll() { }
+      } 
+    });
   }
 
   return createServerClient(

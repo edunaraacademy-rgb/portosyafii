@@ -18,7 +18,9 @@ const Hero = () => {
 
   const name = profile?.name || "Syafii Yuska Kudadiri";
   const tagline = profile?.tagline || "Duta Pemuda Global";
+  const tagline2 = profile?.tagline2 || "Pemuda Pemimpin Masa Depan.";
   const description = profile?.description || "Memberdayakan masyarakat Dairi melalui teknologi, olahraga, dan ekonomi kreatif untuk menciptakan dampak sosial yang berkelanjutan.";
+  const portraitUrl = profile?.portrait_url || "/images/portrait.png";
 
   return (
     <section id="beranda" className="mt-24 py-20 grid grid-cols-12 gap-8 items-center max-w-7xl mx-auto px-8">
@@ -30,55 +32,31 @@ const Hero = () => {
           {name}
         </h1>
         <h2 className="font-space text-3xl lg:text-4xl mb-8 text-secondary font-bold uppercase tracking-widest">
-          Pemuda <span className="text-secondary-fixed-dim">Pemimpin</span> Masa Depan.
+          {tagline2}
         </h2>
         <p className="text-2xl text-slate-600 max-w-2xl mb-12 leading-relaxed font-medium">
           {description}
         </p>
         <div className="flex items-center gap-6">
           <button className="bg-primary text-white px-10 py-5 font-space font-bold rounded-full transition-all hover:bg-secondary-container hover:text-on-secondary-container flex items-center gap-3 shadow-xl">
-            Baca Visi Saya <span className="material-symbols-outlined">arrow_forward</span>
+            Mari Berkolaborasi
+            <span className="material-symbols-outlined">arrow_forward</span>
           </button>
-          <div className="flex -space-x-4">
-            <div className="w-12 h-12 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
-               <Image 
-                 src="/images/portrait.png" 
-                 alt="Portrait" 
-                 width={48} 
-                 height={48} 
-                 className="object-cover"
-               />
-            </div>
-            <div className="w-12 h-12 rounded-full border-2 border-white bg-secondary-fixed flex items-center justify-center font-space font-bold text-on-secondary-fixed">
-              +12k
-            </div>
-          </div>
         </div>
       </div>
       <div className="col-span-12 lg:col-span-5 relative">
-        <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl bg-slate-200 relative">
-           <Image 
-             src="/images/portrait.png" 
-             alt="Syafii Yuska Kudadiri" 
-             fill 
-             className="object-cover"
-             priority
-           />
+        <div className="relative aspect-[3/4] w-full max-w-md mx-auto rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
+          <Image 
+            src={portraitUrl}
+            alt={name}
+            fill
+            className="object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out scale-110 hover:scale-100"
+          />
         </div>
-        {/* Glass Card Overlay */}
-        <div className="absolute -bottom-10 -left-10 bg-white/80 backdrop-blur-xl p-8 rounded-2xl border border-white/20 shadow-2xl hidden xl:block max-w-xs">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
-              <span className="material-symbols-outlined text-on-secondary-container" style={{fontVariationSettings: "'FILL' 1"}}>verified</span>
-            </div>
-            <div>
-              <p className="font-space font-bold text-primary">Mentor Bersertifikat</p>
-              <p className="text-sm text-slate-500">Aktivis Kepemudaan Dairi</p>
-            </div>
-          </div>
-          <p className="text-slate-600 italic leading-relaxed">
-            "Kepemimpinan sejati bukan tentang memegang jabatan, tapi tentang menjaga mereka yang ada dalam tanggung jawab kita."
-          </p>
+        {/* Floating Achievement Card */}
+        <div className="absolute -bottom-10 -left-10 bg-white p-8 rounded-3xl shadow-2xl max-w-[200px] hidden lg:block border border-slate-100 animate-bounce-slow">
+           <span className="text-5xl font-black text-secondary-fixed block mb-2 font-space tracking-tighter">24+</span>
+           <span className="text-sm font-space font-bold text-primary uppercase leading-tight block">Penghargaan Kepemimpinan</span>
         </div>
       </div>
     </section>

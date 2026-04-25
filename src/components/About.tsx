@@ -17,6 +17,7 @@ const About = () => {
 
   const vision = profile?.about_vision || "Mengubah Semangat Menjadi Perubahan Sistemik untuk Era Modern.";
   const visionDesc = profile?.about_vision_desc || "\"Saya membayangkan dunia di mana keberanian pemuda bertemu dengan kebijakan infrastruktur, menciptakan platform kesetaraan digital yang melampaui batas.\"";
+  const aboutDescription = profile?.about_description || "Lahir di Sitinjo, Syafii Yuska Kudadiri selalu didorong oleh keinginan untuk melayani masyarakat di Dairi. Sebagai lulusan Fakultas Teknik UMSU, ia menggabungkan logika teknis dengan pengabdian sosial.";
   const location = profile?.location || "Kutabaru Sitinjo Dairi";
   const birthDate = profile?.birth_date ? new Date(profile.birth_date).toLocaleDateString("id-ID", { day: 'numeric', month: 'long', year: 'numeric' }) : "9 September 1996";
   const education = profile?.education || "Fakultas Teknik UMSU (Alumni 2020)";
@@ -60,7 +61,7 @@ const About = () => {
           <h2 className="font-space text-5xl text-primary font-bold mb-8">Latar Belakang Pribadi</h2>
           <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
             <p>
-              Lahir di Sitinjo, Syafii Yuska Kudadiri selalu didorong oleh keinginan untuk melayani masyarakat di Dairi. Sebagai lulusan Fakultas Teknik UMSU, ia menggabungkan logika teknis dengan pengabdian sosial.
+              {aboutDescription}
             </p>
             <div className="bg-surface-container p-8 rounded-2xl border border-slate-200">
               <ul className="space-y-4">
@@ -80,16 +81,9 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4">
-           <div className="bg-secondary-fixed p-8 rounded-3xl text-on-secondary-fixed shadow-lg">
-              <span className="material-symbols-outlined text-4xl mb-4">sports_soccer</span>
-              <h3 className="font-space font-bold text-xl mb-2">Olahraga & Pemuda</h3>
-              <p className="text-sm opacity-80 font-medium">Pengembangan bakat muda dan aktivis pemberdayaan pemuda Dairi.</p>
-           </div>
-           <div className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100">
-              <span className="material-symbols-outlined text-4xl mb-4 text-secondary">explore</span>
-              <h3 className="font-space font-bold text-xl mb-2">Pariwisata & UMKM</h3>
-              <p className="text-sm text-slate-500 font-medium">Promosi Tao Silalahi, agrowisata, dan pembinaan UMKM kreatif.</p>
+        <div className="relative">
+           <div className="bg-slate-100 aspect-video rounded-[2rem] overflow-hidden shadow-inner flex items-center justify-center p-12">
+              <p className="font-space text-center text-slate-400 italic">"Pendidikan adalah senjata paling mematikan di dunia, karena dengan itu Anda dapat mengubah dunia."</p>
            </div>
         </div>
       </div>
