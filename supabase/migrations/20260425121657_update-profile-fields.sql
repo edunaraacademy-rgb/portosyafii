@@ -1,0 +1,6 @@
+ALTER TABLE profile 
+ADD COLUMN IF NOT EXISTS about_vision TEXT,
+ADD COLUMN IF NOT EXISTS about_vision_desc TEXT,
+ADD COLUMN IF NOT EXISTS contact_email TEXT,
+ADD COLUMN IF NOT EXISTS contact_instagram TEXT,
+ADD COLUMN IF NOT EXISTS contact_linkedin TEXT;
