@@ -29,6 +29,7 @@ const Navbar = () => {
           <Link href="#beranda" className="text-slate-900 border-b-2 border-lime-400 pb-1 hover:text-lime-500 transition-all">Beranda</Link>
           <Link href="#tentang" className="text-slate-500 hover:text-lime-500 transition-all">Tentang</Link>
           <Link href="#proyek" className="text-slate-500 hover:text-lime-500 transition-all">Proyek</Link>
+          <Link href="/blog" className="text-slate-500 hover:text-lime-500 transition-all">Blog</Link>
           <Link href="#keterampilan" className="text-slate-500 hover:text-lime-500 transition-all">Keterampilan</Link>
           <Link href="#kontak" className="text-slate-500 hover:text-lime-500 transition-all">Kontak</Link>
         </div>
